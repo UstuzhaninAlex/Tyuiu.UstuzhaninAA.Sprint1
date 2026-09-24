@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.UstuzhaninAA.Sprint1.Task1.V0.Lib\Tyuiu.UstuzhaninAA.Sprint1.Task1.V0.Lib.csproj" />
+    <ProjectReference Include="..\Tyuiu.UstuzhaninAA.Sprint1.Task3.V0.Lib\Tyuiu.UstuzhaninAA.Sprint1.Task3.V6.Lib.csproj" />
   </ItemGroup>
 
   <ItemGroup>

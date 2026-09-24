@@ -1,5 +1,6 @@
-﻿using Tyuiu.UstuzhaninAA.Sprint1.Task2.V0.Lib;
-namespace Tyuiu.UstuzhaninAA.Sprint1.Task1.V0
+﻿using System.Diagnostics.Metrics;
+using Tyuiu.UstuzhaninAA.Sprint1.Task3.V6.Lib;
+namespace Tyuiu.UstuzhaninAA.Sprint1.Task1.V6
 {
     class Program
     {
@@ -10,25 +11,37 @@ namespace Tyuiu.UstuzhaninAA.Sprint1.Task1.V0
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #1                                                               *");
             Console.WriteLine("* Тема: Организация ввода/вывода в консольных приложениях                 *");
-            Console.WriteLine("* Задание #2                                                              *");
-            Console.WriteLine("* Вариант #19                                                             *");
+            Console.WriteLine("* Задание #3                                                              *");
+            Console.WriteLine("* Вариант #6                                                             *");
             Console.WriteLine("* Выполнила: Устюжанин Алексей Андреевич | ИСПб-26-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, которая запрашивает у пользователя исходные данные, *");
-            Console.WriteLine("* выполняет указанные расчёты и печатает результат на экране.             *");
+            Console.WriteLine("* Написать программу вычисления стоимости поездки на автомобиле на дачу   *");
+            Console.WriteLine("* (туда и обратно).                                                        *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("Введите количество дюймов: ");
-            int inches = Convert.ToInt32(Console.ReadLine());
-            double meters = ds.ConvertInchToKm(inches);
+            Console.WriteLine("Растояние до дачи (км) ");
+            double distance = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Расход бензина (литров на 100 км пробега) ");
+            double consumption = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Цена литра бензина (руб.) ");
+            double price = Convert.ToDouble(Console.ReadLine());
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine($"Растояние в метрах = {meters}");
+
+            double res = ds.TravelCost(distance, consumption, price);
+
+            Console.WriteLine($"Поуздка на дачу и обратно обойдётся в {res} руб.");
             Console.ReadKey();
+
+
+
         }
     }
 }
