@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.Metrics;
 using Tyuiu.UstuzhaninAA.Sprint1.Task3.V6.Lib;
-namespace Tyuiu.UstuzhaninAA.Sprint1.Task1.V6
+namespace Tyuiu.UstuzhaninAA.Sprint1.Task3.V6
 {
     class Program
     {
