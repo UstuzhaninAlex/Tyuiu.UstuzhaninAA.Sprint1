@@ -9,10 +9,10 @@ namespace Tyuiu.UstuzhaninAA.Sprint1.Task4.V20.Test
         {
             DataService ds = new DataService();
             double x = 3;
-            double y = 2
+            double y = 2;
             double wait = 4;
             double res = ds.Calculate(x, y);
-            Assert.AreEqual(wait, res, 0,001);
+            Assert.AreEqual(wait, res);
         }
     }
 }
