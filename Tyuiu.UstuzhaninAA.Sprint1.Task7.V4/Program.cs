@@ -1,5 +1,6 @@
-﻿using Tyuiu.UstuzhaninAA.Sprint1.Task6.V8.Lib;
-namespace Tyuiu.UstuzhaninAA.Sprint1.Task6.V8
+﻿using System.Linq.Expressions;
+using Tyuiu.UstuzhaninAA.Sprint1.Task7.V4.Lib;
+namespace Tyuiu.UstuzhaninAA.Sprint1.Task7.V4
 {
     class Program
     {
@@ -9,29 +10,35 @@ namespace Tyuiu.UstuzhaninAA.Sprint1.Task6.V8
             Console.Title = "Спринт #1 | Выполнил: Устюжанин А. А. | ИСПб-26-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #1                                                               *");
-            Console.WriteLine("* Тема: Работа со строками класс String                                   *");
-            Console.WriteLine("* Задание #6                                                              *");
-            Console.WriteLine("* Вариант #8                                                              *");
+            Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
+            Console.WriteLine("* Задание #7                                                              *");
+            Console.WriteLine("* Вариант #4                                                              *");
             Console.WriteLine("* Выполнила: Устюжанин Алексей Андреевич | ИСПб-26-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу: пользователь вводит текст. Напечатать все слова,    *");
-            Console.WriteLine("* перенеся их первую букву в конец.                                       *");
-            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("* Написать программу, которая вычисляет математическое выражение          *");
+            Console.WriteLine("* по исходным значениям данных, вводимых пользователем.                   *");
+            Console.WriteLine("* Ответ округлите до 3 знаков после запятой.                              *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine(" ");
-            string input = Console.ReadLine() ?? "";
-
-
+            Console.WriteLine("Введите значение x: ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите значение y: ");
+            double y = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            string result = ds.MoveLetterToEnd(input);
+            {
+                double z = ds.Calculate(x, y);
+                Console.WriteLine($"Значение выражения z = {z}");
 
-            Console.WriteLine(result);
+            }
+            
+            
+
+            
             Console.ReadKey();
         }
     }
